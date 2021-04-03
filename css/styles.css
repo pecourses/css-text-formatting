@@ -1,0 +1,95 @@
+span {
+  color: blueviolet;
+  font-size: 20px;
+  text-align: start;
+  direction: ltr;
+
+  letter-spacing: 0.2em; /* расстояние м/у буквами */
+  word-spacing: 0.5em; /* расстояние м/у словами */
+  line-height: 1.15em; /* межстрочное расстояние */
+  text-indent: 1.5em; /* отступ первой строки */
+  /* unicode-bidi: ;        для иероглифов*/
+  text-shadow: 1em 1em 0.1em greenyellow; /*тень текста: смещение-по-х смещение-по-у радиус-размытия цвет*/
+
+  font-weight: bold;
+  font-family: 'Fira Mono', 'DejaVu Sans Mono', monospace; /* по убыванию приоритета, последний - общее семейство*/
+  font-style: oblique 90deg;
+  font-variant: small-caps; /* способ написания символов, например малые заглавные */
+  font-stretch: ultra-condensed; /* сжатость/растянутость символов */
+}
+
+a {
+  text-decoration: none; /* -line, -color, -style*/
+  font-weight: lighter;
+}
+
+button {
+  min-width: 50px;
+  width: 10%;
+  max-width: 150px;
+  height: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* text-align: left; */
+}
+
+.overflow {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  width: 200px;
+  height: 150px;
+  overflow: auto;
+  white-space: pre;
+}
+
+.link {
+  width: 100px;
+  height: 1.5em;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Cascading */
+/* points: 1*/
+body {
+  color: aqua;
+}
+p {
+  color: blue;
+}
+/* points: 10 */
+.greenP {
+  color: green;
+}
+/* points: 100 */
+#redP {
+  color: red;
+}
+/* fot inline style:
+   points: 1000 */
+
+/* Selector types (комбинаторы) */
+/* Комбинатор , */
+/* ------------------------------------ */
+/* Комбинатор соседнего элемента */
+/* h2 + p {
+  color: darkslateblue;
+} */
+
+/* Комбинатор */
+h2 ~ p {
+  color: darkslateblue;
+}
+/* --------------------------------------------- */
+/* Комбинатор дочернего элемента (1 уровень вложенности)*/
+/* .div1 > div {
+  border: 1px solid blue;
+} */
+
+/* Комбинатор потомков (любой уровень вложенности) */
+.div1 div {
+  border: 1px solid blue;
+}
